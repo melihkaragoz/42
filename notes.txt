@@ -1,0 +1,7 @@
+ft_memcpy.c -> yeni fonksiyon orjinal fonksiyon ile ayni sonucu vermiyor, şimdilik geçiliyor tekrar test yapilacak.
+ft_strlcat  -> tekrar gozden gecir.
+ft_strchr   -> tekrar gozden gecir.
+ft_strncmp  -> tekrar gozden gecir.
+ft_memchr   -> tekrar gozden gecir.
+ft_memcmp   -> tekrar gozden gecir.
+
