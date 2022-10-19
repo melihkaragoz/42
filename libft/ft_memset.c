@@ -6,13 +6,13 @@
 /*   By: mkaragoz <mkaragoz@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 15:08:41 by mkaragoz          #+#    #+#             */
-/*   Updated: 2022/10/05 21:31:05 by mkaragoz         ###   ########.fr       */
+/*   Updated: 2022/10/19 20:39:03 by mkaragoz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*memset(void *ptr, int x, size_t n)
+void	*ft_memset(void *ptr, int x, size_t n)
 {
 	int	i;
 
