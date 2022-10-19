@@ -6,34 +6,24 @@
 /*   By: mkaragoz <mkaragoz@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 22:30:21 by mkaragoz          #+#    #+#             */
-/*   Updated: 2022/10/07 22:46:49 by mkaragoz         ###   ########.fr       */
+/*   Updated: 2022/10/19 13:56:28 by mkaragoz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+
+
+
 char	*ft_strtrim(char const *s1, char const *set)
 {
+	int		fi;
+	int		li;
 	int		i;
-	int		j;
-	int		way;
-	char	*newstr;
-	int		it;
 
-	i = 0;
-	way = 0;
-	it = 0;
-	while (s1 && way < 2)
+	if (*set != 0 && *s1 != 0)
 	{
-		j = 0;
-		while (set)
+		while (s1)
 		{
-			if (s1[i] == set[j])
-				j++;
-			else
-			{
-				newstr + it = malloc(sizeof(char));
-				newstr + (it++) = set[j++];
-			}
+
 		}
 	}
-	return (newstr);
 }
