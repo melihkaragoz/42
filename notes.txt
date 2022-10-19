@@ -1,4 +1,2 @@
-ft_strlcat  -> tekrar gozden gecir.
-ft_strncmp  -> tekrar gozden gecir.
-ft_memcmp   -> tekrar gozden gecir.
-
+ft_strchr, ft_strlen, ft_substr fonksiyonlarinin birinde hata var, incele 
+!!!
