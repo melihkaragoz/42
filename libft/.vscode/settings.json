@@ -2,7 +2,9 @@
 	"files.associations": {
 		"libft.h": "c",
 		"stdlib.h": "c",
-		"random": "c"
+		"random": "c",
+		"__config": "c",
+		"locale": "c"
 	},
 	"C_Cpp.errorSquiggles": "Disabled"
 }
