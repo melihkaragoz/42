@@ -1,2 +1,13 @@
 ft_strchr, ft_strlen, ft_substr fonksiyonlarinin birinde hata var, incele 
 !!!
+
+
+ft_itoa.c:27 = satir sayisindan kurtarmak icin nf'yi burada artirdim. 
+nf=0 iken if icinde artirmiyor o yuzden nf=1
+
+ft_itoa.c:31 = sayi negatif oldugunda - icin bir yer daha ayrilmasi 
+gerek o yuzden + (nf-1) kadar yer aciyoruz. (-1'in sebebi kosul icinde 
+artirma yapmadigindan nf'yi 1 olarak baslatmistik kosulda 2 oldu bize 1 
+lazim oldugu icin 1 azalttik)
+
+
