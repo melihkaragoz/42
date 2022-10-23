@@ -6,7 +6,7 @@
 /*   By: mkaragoz <mkaragoz@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/23 15:29:47 by mkaragoz          #+#    #+#             */
-/*   Updated: 2022/10/23 16:49:59 by mkaragoz         ###   ########.fr       */
+/*   Updated: 2022/10/23 16:54:45 by mkaragoz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,13 +29,13 @@ char	*ft_itoa(int n)
 	while (n > 0 && (n / bs) > 10 && b++)
 		bs *= 10;
 	cp = malloc(b * sizeof(char) + 1 + (nf - 1));
+	if (!cp)
+		return (0);
 	if (nf == 2)
 		*(cp + (cpi++)) = 45;
+	bs *= 10;
 	while (b > 0 && b--)
-	{
-		*(cp + (cpi++)) = (n / bs) % 10 + 48;
-		bs /= 10;
-	}
+		*(cp + (cpi++)) = (n / (bs /= 10)) % 10 + 48;
 	*(cp + (cpi++)) = 0;
 	return (cp);
 }
