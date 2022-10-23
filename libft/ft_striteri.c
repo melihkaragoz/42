@@ -6,7 +6,7 @@
 /*   By: mkaragoz <mkaragoz@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/23 17:34:39 by mkaragoz          #+#    #+#             */
-/*   Updated: 2022/10/24 00:41:33 by mkaragoz         ###   ########.fr       */
+/*   Updated: 2022/10/24 01:41:13 by mkaragoz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,6 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 	if (!new)
 		return (0);
 	while (s[i])
-		new[i] = f(i, s+(i++));
+		new[i] = f(i, s + (i++));
 	new[len] = 0;
 }
