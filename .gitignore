@@ -1,2 +1,4 @@
-./libft-unit-test
-./libft/libftTester
+libft-unit-test/
+libft/libftTester/
+libft/.vscode/
+.DS_Store/
