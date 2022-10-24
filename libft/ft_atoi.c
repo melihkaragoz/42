@@ -6,11 +6,18 @@
 /*   By: mkaragoz <mkaragoz@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 04:35:46 by mkaragoz          #+#    #+#             */
-/*   Updated: 2022/10/08 02:14:02 by mkaragoz         ###   ########.fr       */
+/*   Updated: 2022/10/25 00:14:20 by mkaragoz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+int	ft_isspace(char c)
+{
+	if (c == 32 || (c >= 9 && c <= 13))
+		return (1);
+	return (0);
+}
 
 int	ft_atoi(const char *str)
 {

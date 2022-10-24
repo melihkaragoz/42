@@ -6,15 +6,15 @@
 /*   By: mkaragoz <mkaragoz@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 15:40:38 by mkaragoz          #+#    #+#             */
-/*   Updated: 2022/10/08 18:31:57 by mkaragoz         ###   ########.fr       */
+/*   Updated: 2022/10/24 19:05:48 by mkaragoz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	if (s && n > 0)

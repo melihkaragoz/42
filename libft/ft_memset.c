@@ -6,7 +6,7 @@
 /*   By: mkaragoz <mkaragoz@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 15:08:41 by mkaragoz          #+#    #+#             */
-/*   Updated: 2022/10/19 20:39:03 by mkaragoz         ###   ########.fr       */
+/*   Updated: 2022/10/24 19:04:58 by mkaragoz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memset(void *ptr, int x, size_t n)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	if (n > 0)

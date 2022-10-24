@@ -6,7 +6,7 @@
 /*   By: mkaragoz <mkaragoz@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 15:16:50 by mkaragoz          #+#    #+#             */
-/*   Updated: 2022/10/24 01:31:54 by mkaragoz         ###   ########.fr       */
+/*   Updated: 2022/10/25 00:52:34 by mkaragoz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	**ft_split(char const *s, char c)
 	int		wc;
 
 	i = 0;
-	n = (char *)s;
+	n = ft_strdup((char *)s);
 	bp = malloc(100 * sizeof(char *));
 	wc = 0;
 	while (*(n + i))

@@ -10,4 +10,4 @@ gerek o yuzden + (nf-1) kadar yer aciyoruz. (-1'in sebebi kosul icinde
 artirma yapmadigindan nf'yi 1 olarak baslatmistik kosulda 2 oldu bize 1 
 lazim oldugu icin 1 azalttik)
 
-
+ft_atoi'yi MakeFile'a ekle. hatali diye cikardim.

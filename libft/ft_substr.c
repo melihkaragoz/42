@@ -6,7 +6,7 @@
 /*   By: mkaragoz <mkaragoz@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 16:45:20 by mkaragoz          #+#    #+#             */
-/*   Updated: 2022/10/24 01:40:41 by mkaragoz         ###   ########.fr       */
+/*   Updated: 2022/10/24 19:21:52 by mkaragoz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*new;
-	int		i;
+	size_t	i;
 
 	i = 0;
 	if (len > 0 && s[start] != '\0')
