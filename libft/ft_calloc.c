@@ -6,7 +6,7 @@
 /*   By: mkaragoz <mkaragoz@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 18:32:37 by mkaragoz          #+#    #+#             */
-/*   Updated: 2022/10/25 03:02:42 by mkaragoz         ###   ########.fr       */
+/*   Updated: 2022/10/25 04:00:13 by mkaragoz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	void	*np;
+	void		*np;
 	size_t		i;
 
 	i = 0;
