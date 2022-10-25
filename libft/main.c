@@ -2,9 +2,13 @@
 
 int	main(void)
 {
-	char	s1[] = "";
-	char	s2[] = "";
-	char *s = ft_strjoin(s1,s2);
-	printf("%s\n",s);
+	char *cp;
+
+	cp = ft_strtrim("","");
+	printf("%s",cp);
 	return (0);
 }
+
+
+	// s = ft_strtrim("", "123");
+	// 9  check(!strcmp(s, ""));

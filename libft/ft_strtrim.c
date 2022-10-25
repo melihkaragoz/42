@@ -6,7 +6,7 @@
 /*   By: mkaragoz <mkaragoz@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 22:30:21 by mkaragoz          #+#    #+#             */
-/*   Updated: 2022/10/24 19:20:47 by mkaragoz         ###   ########.fr       */
+/*   Updated: 2022/10/25 07:04:28 by mkaragoz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	i = 0;
 	ns = 0;
+	if (!s1 || !set)
+		return (0);
 	if (*set != 0 && *s1 != 0)
 	{
 		while (s1[i] && ft_strchr(set, s1[i]))
