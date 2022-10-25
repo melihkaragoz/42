@@ -6,35 +6,92 @@
 /*   By: mkaragoz <mkaragoz@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 15:16:50 by mkaragoz          #+#    #+#             */
-/*   Updated: 2022/10/25 00:52:34 by mkaragoz         ###   ########.fr       */
+/*   Updated: 2022/10/25 01:58:38 by mkaragoz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	**ft_split(char const *s, char c)
+int	word_counter(const char *str, char c)
 {
-	char	**bp;
-	char	*n;
-	int		i;
-	int		j;
-	int		wc;
+	int	count;
+	int	i;
+	int	flag;
+
+	count = 0;
+	i = 0;
+	flag = 1;
+	while (str[i])
+	{
+		if (str[i] != c && flag == 1)
+		{
+			count++;
+			flag = 0;
+		}
+		else if (str[i] == c)
+			flag = 1;
+		i++;
+	}
+	return (count);
+}
+
+int	word_len(const char *str, char c)
+{
+	int	i;
+	int	count;
 
 	i = 0;
-	n = ft_strdup((char *)s);
-	bp = malloc(100 * sizeof(char *));
-	wc = 0;
-	while (*(n + i))
+	count = 0;
+	while (str[i] == c)
+		i++;
+	while (str[i] != c && str[i])
 	{
-		while (*(n + i) == c)
-			i++;
-		j = i;
-		while (*(n + i) && *(n + i) != c)
-			i++;
-		if (++wc && *(n + i))
-			n[i++] = 0;
-		bp[wc - 1] = (n + j);
+		i++;
+		count++;
 	}
-	bp[++wc] = 0;
-	return (bp);
+	return (count);
+}
+
+char	*stringer(const char *src, char c)
+{
+	char	*ret;
+	int		i;
+
+	ret = malloc(sizeof(char) * word_len(src, c) + 1);
+	i = 0;
+	while (*src && *src != c)
+	{
+		ret[i] = *(src++);
+		i++;
+	}
+	ret[i] = '\0';
+	return (ret);
+}
+
+char	**ft_split(const char *s, char c)
+{
+	char	**result;
+	size_t	size;
+	size_t	i;
+	size_t	j;
+
+	if (!s)
+		return (NULL);
+	size = word_counter(s, c);
+	result = malloc(sizeof(char *) * size + 1);
+	if (result == NULL)
+		return (0);
+	i = 0;
+	j = 0;
+	while (j < size && s[i])
+	{
+		while (s[i] == c)
+			i++;
+		result[j] = stringer(&s[i], c);
+		while (s[i] != c && s[i])
+			i++;
+		j++;
+	}
+	result[j] = NULL;
+	return (result);
 }

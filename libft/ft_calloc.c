@@ -6,7 +6,7 @@
 /*   By: mkaragoz <mkaragoz@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 18:32:37 by mkaragoz          #+#    #+#             */
-/*   Updated: 2022/10/24 19:12:14 by mkaragoz         ###   ########.fr       */
+/*   Updated: 2022/10/25 03:02:42 by mkaragoz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_calloc(size_t count, size_t size)
 
 	i = 0;
 	np = NULL;
-	if (count && size)
+	if ((count && size) && (count < SIZE_MAX && size < SIZE_MAX))
 	{
 		np = (void *) malloc(count * size);
 		while (i < count * size)

@@ -6,9 +6,11 @@
 /*   By: mkaragoz <mkaragoz@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/23 17:34:39 by mkaragoz          #+#    #+#             */
-/*   Updated: 2022/10/24 01:41:13 by mkaragoz         ###   ########.fr       */
+/*   Updated: 2022/10/25 02:39:19 by mkaragoz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
@@ -18,12 +20,15 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 
 	i = 0;
 	if (!(s && f))
-		return (0);
-	len = ft_strlen();
+		return ;
+	len = ft_strlen(s);
 	new = malloc(len * sizeof(char) + 1);
 	if (!new)
-		return (0);
+		return ;
 	while (s[i])
-		new[i] = f(i, s + (i++));
+	{
+		f(i, &s[i]);
+		i++;
+	}
 	new[len] = 0;
 }

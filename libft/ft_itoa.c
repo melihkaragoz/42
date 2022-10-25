@@ -6,36 +6,63 @@
 /*   By: mkaragoz <mkaragoz@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/23 15:29:47 by mkaragoz          #+#    #+#             */
-/*   Updated: 2022/10/23 16:54:45 by mkaragoz         ###   ########.fr       */
+/*   Updated: 2022/10/25 02:06:42 by mkaragoz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+int	digit_finder(int a)
+{
+	int	result;
+
+	result = 0;
+	if (a == 0)
+		return (1);
+	else if (a == -2147483648)
+		return (11);
+	else if (a < 0)
+	{
+		result++;
+		a *= -1;
+	}
+	while (a > 9)
+	{
+		a /= 10;
+		result++;
+	}
+	return (++result);
+}
+
+void	int_manup(int *a, char *result)
+{
+	*a *= -1;
+	result[0] = '-';
+}
+
 char	*ft_itoa(int n)
 {
-	int		b;
-	int		bs;
-	int		cpi;
-	char	*cp;
-	int		nf;
+	char	*result;
+	int		size;
 
-	b = 1;
-	bs = 1;
-	cpi = 0;
-	nf = 1;
-	if (n < 0 && nf++)
-		n *= -1;
-	while (n > 0 && (n / bs) > 10 && b++)
-		bs *= 10;
-	cp = malloc(b * sizeof(char) + 1 + (nf - 1));
-	if (!cp)
+	size = digit_finder(n);
+	result = malloc(sizeof(char) * size + 1);
+	if (!result)
 		return (0);
-	if (nf == 2)
-		*(cp + (cpi++)) = 45;
-	bs *= 10;
-	while (b > 0 && b--)
-		*(cp + (cpi++)) = (n / (bs /= 10)) % 10 + 48;
-	*(cp + (cpi++)) = 0;
-	return (cp);
+	result[size--] = '\0';
+	if (n == 0)
+		result[size--] = '0';
+	else if (n == -2147483648)
+	{
+		result[size--] = '8';
+		n = -214748364;
+	}
+	if (n < 0)
+		int_manup(&n, result);
+	while (n > 0)
+	{
+		result[size--] = (n % 10) + 48;
+		n /= 10;
+	}
+	return (result);
 }
