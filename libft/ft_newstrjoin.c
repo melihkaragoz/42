@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mkaragoz <mkaragoz@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/25 04:51:19 by mkaragoz          #+#    #+#             */
-/*   Updated: 2022/10/25 05:20:40 by mkaragoz         ###   ########.fr       */
+/*   Created: 2022/10/18 06:57:23 by mkaragoz          #+#    #+#             */
+/*   Updated: 2022/10/25 04:43:49 by mkaragoz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,31 +14,22 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	int		i;
-	int		j;
 	size_t	l1;
 	size_t	l2;
-	char	*np;
+	char	*n;
+	int		i;
 
-	np = 0;
 	i = 0;
-	j = 0;
 	l1 = ft_strlen(s1);
+	n = 0;
 	l2 = ft_strlen(s2);
-	if (l1 + l2 <= 0)
+	n = malloc((l1 + l2) + 10 * sizeof(char));
+	if (!n)
 		return (0);
-	np = malloc((l1 + l2 + 1) * sizeof(char));
-	while (s1[i])
-	{
-		np[i] = s1[i];
-		i++;
-	}
-	while (s2[j])
-	{
-		np[i] = s2[j];
-		i++;
-		j++;
-	}
-	np[i] = 0;
-	return (np);
+	while (*s1 != 0)
+		n[i++] = *(s1++);
+	while (*s2 != 0)
+		n[i++] = *(s2++);
+	n[i] = 0;
+	return (n);
 }

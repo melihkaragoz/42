@@ -2,11 +2,10 @@
 
 int	main(void)
 {
-	void	*p;
-	char *s = ft_strdup((char *)"coucou");
+	char	s1[] = "tripouille";
+	char	s2[] = "42";
+	//char *s = ft_strjoin("tripouille", "42");
+	char *s = ft_strjoin(s1,s2);
 	printf("%s\n",s);
 	return (0);
 }
-
-        // char * s = ft_strdup((char*)"coucou");
-        // 1  check(!strcmp(s, "coucou"));
