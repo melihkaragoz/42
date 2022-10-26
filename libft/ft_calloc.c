@@ -6,7 +6,7 @@
 /*   By: mkaragoz <mkaragoz@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 18:32:37 by mkaragoz          #+#    #+#             */
-/*   Updated: 2022/10/25 04:00:13 by mkaragoz         ###   ########.fr       */
+/*   Updated: 2022/10/26 20:05:26 by mkaragoz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,8 @@ void	*ft_calloc(size_t count, size_t size)
 	size_t		i;
 
 	i = 0;
-	np = NULL;
+	np =  malloc(1 * sizeof(char));
+	((char *)np)[0] = 0;
 	if ((count && size) && (count < SIZE_MAX && size < SIZE_MAX))
 	{
 		np = (void *) malloc(count * size);
