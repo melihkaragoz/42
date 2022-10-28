@@ -6,7 +6,7 @@
 /*   By: mkaragoz <mkaragoz@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 02:12:31 by mkaragoz          #+#    #+#             */
-/*   Updated: 2022/10/28 02:19:20 by mkaragoz         ###   ########.fr       */
+/*   Updated: 2022/10/28 04:21:52 by mkaragoz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,6 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 			return ;
 		}
 	}
-	new->next = lst;
+	new->next = *lst;
 	*lst = new;
 }

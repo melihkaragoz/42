@@ -6,7 +6,7 @@
 /*   By: mkaragoz <mkaragoz@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 15:40:38 by mkaragoz          #+#    #+#             */
-/*   Updated: 2022/10/24 19:05:48 by mkaragoz         ###   ########.fr       */
+/*   Updated: 2022/10/28 04:28:03 by mkaragoz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_bzero(void *s, size_t n)
 	size_t	i;
 
 	i = 0;
-	if (s && n > 0)
+	if (n > 0)
 	{
 		while (i < n)
 		{
