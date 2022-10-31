@@ -6,7 +6,7 @@
 /*   By: mkaragoz <mkaragoz@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 04:51:19 by mkaragoz          #+#    #+#             */
-/*   Updated: 2022/10/28 10:09:37 by mkaragoz         ###   ########.fr       */
+/*   Updated: 2022/10/28 17:22:26 by mkaragoz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	j = 0;
 	l1 = ft_strlen(s1);
 	l2 = ft_strlen(s2);
+	if (!s2)
+		return (0);
 	if (l1 + l2 <= 0)
 		return (0);
 	np = malloc((l1 + l2 + 1) * sizeof(char));

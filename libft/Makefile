@@ -37,7 +37,8 @@ SRCS =	ft_isalpha.c \
 		ft_lstlast.c\
 		ft_lstsize.c\
 		ft_lstadd_front.c\
-		ft_lstnew.c
+		ft_lstnew.c\
+		ft_lstclear.c
 
 CC = gcc
 CFLAGS = -Wall -Werror -Wextra -g
