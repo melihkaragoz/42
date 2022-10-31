@@ -6,7 +6,7 @@
 /*   By: mkaragoz <mkaragoz@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 22:30:21 by mkaragoz          #+#    #+#             */
-/*   Updated: 2022/10/28 10:12:13 by mkaragoz         ###   ########.fr       */
+/*   Updated: 2022/10/31 20:13:01 by mkaragoz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,24 +14,18 @@
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	int		i;
-	int		j;
-	char	*ns;
+	int		till_i_collapse;
+	char	*result;
 
-	i = 0;
-	ns = 0;
 	if (!s1 || !set)
 		return (NULL);
-	if (set != 0 && s1 != 0)
-	{
-		while (s1[i] && ft_strchr(set, s1[i]))
-			i++;
-		j = ft_strlen(s1) - 1;
-		while (s1[j] && ft_strchr(set, s1[j]))
-			j--;
-		ns = ft_substr(s1, i, (++j - i));
-		if (!ns)
-			return (NULL);
-	}
-	return (ns);
+	while (*s1 && ft_strchr(set, *s1))
+		s1++;
+	till_i_collapse = ft_strlen(s1) - 1;
+	while (till_i_collapse && ft_strchr(set, s1[till_i_collapse]))
+		till_i_collapse--;
+	result = ft_substr(s1, 0, till_i_collapse + 1);
+	if (result == NULL)
+		return (0);
+	return (result);
 }
