@@ -6,7 +6,7 @@
 /*   By: mkaragoz <mkaragoz@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 15:16:50 by mkaragoz          #+#    #+#             */
-/*   Updated: 2022/10/25 01:58:38 by mkaragoz         ###   ########.fr       */
+/*   Updated: 2022/11/01 16:31:35 by mkaragoz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,8 +78,8 @@ char	**ft_split(const char *s, char c)
 	if (!s)
 		return (NULL);
 	size = word_counter(s, c);
-	result = malloc(sizeof(char *) * size + 1);
-	if (result == NULL)
+	result = malloc(sizeof(char *) * (size + 1));
+	if (!result)
 		return (0);
 	i = 0;
 	j = 0;
