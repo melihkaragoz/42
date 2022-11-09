@@ -1,3 +1,0 @@
-ft_memmove - ft_memcpy farkinin kaniti
-ft_bzero -> int array ile calistir
-ft_lst lere main yaz
